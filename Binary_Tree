@@ -1,0 +1,163 @@
+
+package Project;
+
+import javax.swing.JLabel;
+
+
+
+
+public class YourVacation {
+
+
+
+
+    
+public static void main(String[] args){
+
+        Vacationapp frame0 = new Vacationapp();
+
+        VacationSystem start = new VacationSystem(1, frame0.getButton1());
+        VacationSystem Asia = new VacationSystem(2, frame0.getFarrightChild());
+        VacationSystem Europe = new VacationSystem(3, frame0.getFarleftChild());
+        VacationSystem NorthAmerica = new VacationSystem(4, frame0.getMiddleChild());
+        VacationSystem SouthAmerica = new VacationSystem(5, frame0.getRightChild());
+        VacationSystem Africa = new VacationSystem(6, frame0.getLeftChild());
+        start.farrightChild = Asia;
+        start.farleftChild = Europe;
+        start.middleChild = NorthAmerica;
+        start.rightChild = SouthAmerica;
+        start.leftChild = Africa;
+        Asia.parent = start;
+        Europe.parent = start;
+        NorthAmerica.parent = start;
+        SouthAmerica.parent = start;
+        Africa.parent = start;
+
+        VacationSystem B8 = new VacationSystem(7, frame0.getFirstRight());
+        VacationSystem A8 = new VacationSystem(8, frame0.getFirstLeft());
+        Asia.leftChild = A8;
+        Asia.rightChild = B8;
+        Europe.leftChild = A8;
+        Europe.rightChild = B8;
+        NorthAmerica.leftChild = A8;
+        NorthAmerica.rightChild = B8;
+        SouthAmerica.leftChild = A8;
+        SouthAmerica.rightChild = B8;
+        Africa.leftChild = A8;
+        Africa.rightChild = B8;
+        A8.parent = Asia;
+        B8.parent = Asia;
+        A8.parent = Europe;
+        B8.parent = Europe;
+        A8.parent = NorthAmerica;
+        B8.parent = NorthAmerica;
+        A8.parent = SouthAmerica;
+        B8.parent = SouthAmerica;
+        A8.parent = Africa;
+        B8.parent = Africa;
+
+        VacationSystem Coast = new VacationSystem(9,frame0.getSecondRight() );
+        VacationSystem NoCoast = new VacationSystem(10, frame0.getSecondLeft());
+
+        A8.rightChild = Coast;
+        A8.leftChild = NoCoast;
+        B8.leftChild = NoCoast;
+        B8.rightChild = Coast;
+        Coast.parent = A8;
+        Coast.parent = B8;
+        NoCoast.parent = B8;
+        NoCoast.parent = A8;
+
+        VacationSystem S = new VacationSystem(11,frame0.getThirdRight() );
+        VacationSystem F = new VacationSystem(12, frame0.getThirdLeft());
+        Coast.rightChild = S;
+        NoCoast.rightChild = S;
+        Coast.leftChild = F;
+        NoCoast.leftChild = F;
+        S.parent = Coast;
+        S.parent = NoCoast;
+        F.parent = Coast;
+        F.parent = NoCoast;
+
+        VacationSystem CS = new VacationSystem(13,frame0.getForthRight() );
+        VacationSystem CC = new VacationSystem(14, frame0.getForthLeft());
+        S.rightChild = CS;
+        S.leftChild = CC;
+        F.rightChild = CS;
+        F.leftChild = CC;
+        CS.parent = S;
+        CC.parent = S;
+        CS.parent = F;
+        CC.parent = F;
+
+        VacationSystem Yes = new VacationSystem(15,frame0.getFifthRight() );
+        VacationSystem No = new VacationSystem(16, frame0.getFifthLeft());
+        CS.rightChild = Yes;
+        CS.leftChild = No;
+        CC.rightChild = No;
+        CC.leftChild = Yes;
+        Yes.parent = CS;
+        Yes.parent = CC;
+        No.parent = CS;
+        No.parent = CC;
+
+        VacationSystem Warm = new VacationSystem(17,frame0.getSixthRight() );
+        VacationSystem Cold = new VacationSystem(18, frame0.getSixthLeft());
+        Yes.rightChild = Warm;
+        Yes.leftChild = Cold;
+        No.rightChild = Warm;
+        No.leftChild = Cold;
+        Warm.parent = Yes;
+        Warm.parent = No;
+        Cold.parent = Yes;
+        Cold.parent = No;
+
+        VacationSystem NL = new VacationSystem(19,frame0.getSeventhRight() );
+        VacationSystem DL = new VacationSystem(20, frame0.getSeventhLeft());
+        Warm.rightChild = NL;
+        Warm.leftChild = DL;
+        Cold.rightChild = NL;
+        Cold.leftChild = DL;
+        NL.parent = Warm;
+        NL.parent = Cold;
+        DL.parent = Warm;
+        DL.parent = Cold;
+
+        VacationSystem LTW = new VacationSystem(21,frame0.getEightRight() );
+        VacationSystem MTW = new VacationSystem(22, frame0.getEightLeft());
+        NL.rightChild = LTW;
+        NL.leftChild = MTW;
+        DL.rightChild = LTW;
+        DL.leftChild = MTW;
+        LTW.parent = NL;
+        LTW.parent = DL;
+        MTW.parent = NL;
+        MTW.parent = DL;
+
+        VacationSystem Y = new VacationSystem(23,frame0.getNinthRight());
+        VacationSystem N = new VacationSystem(24, frame0.getNinthRight());
+        LTW.rightChild = Y;
+        LTW.leftChild = N;
+        MTW.rightChild = Y;
+        MTW.leftChild = N;
+        Y.parent = LTW;
+        Y.parent = MTW;
+        N.parent = LTW;
+        N.parent = MTW;
+        
+
+
+
+ 
+
+
+
+
+
+
+
+}
+
+
+
+}
