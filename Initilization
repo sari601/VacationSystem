@@ -1,0 +1,92 @@
+
+package Project;
+
+import javax.swing.JLabel;
+
+
+
+
+public class VacationSystem<K,V> {
+
+    public static JLabel  C1;
+    public K key;
+    public V value;
+    public VacationSystem<K, V> leftChild;
+    public VacationSystem<K, V> rightChild;
+    public VacationSystem<K, V> parent;
+    public VacationSystem<K, V> middleChild;
+    public VacationSystem<K, V> farrightChild;
+    public VacationSystem<K, V> farleftChild;
+    public VacationSystem<K, V> root;
+
+
+
+
+    public VacationSystem(VacationSystem root){
+        this.root = root;
+
+    }
+
+    public VacationSystem(K key,V value){
+        this.key = key;
+        this.value = value;
+    }
+    public K getKey() {
+        return key;
+    }
+
+    public void setKey(K key) {
+        this.key = key;
+    }
+
+    public VacationSystem<K, V> getLeftChild() {
+        return leftChild;
+    }
+
+    public void setLeftChild(VacationSystem<K, V> leftChild) {
+        this.leftChild = leftChild;
+    }
+
+    public VacationSystem<K, V> getParent() {
+        return parent;
+    }
+
+    public void setParent(VacationSystem<K, V> parent) {
+        this.parent = parent;
+    }
+
+    public VacationSystem<K, V> getRightChild() {
+        return rightChild;
+    }
+
+    public void setRightChild(VacationSystem<K, V> rightChild) {
+        this.rightChild = rightChild;
+    }
+    public VacationSystem<K, V> getmiddleChild() {
+        return middleChild;
+    }
+    public void setmiddleChild(VacationSystem<K, V> middleChild) {
+        this.middleChild = middleChild;
+    }
+     public VacationSystem<K, V> getfarrightChild() {
+        return farrightChild;
+    }
+    public void setfarrightChild(VacationSystem<K, V> farrightChild) {
+        this.farrightChild = farrightChild;
+    }
+     public VacationSystem<K, V> getfarleftChild() {
+        return farleftChild;
+    }
+    public void setfarleftChild(VacationSystem<K, V> farleftChild) {
+        this.farleftChild = farleftChild;
+    }
+    public V getValue() {
+        return value;
+    }
+
+    public void setValue(V value) {
+        this.value = value;
+    }
+    
+
+}
